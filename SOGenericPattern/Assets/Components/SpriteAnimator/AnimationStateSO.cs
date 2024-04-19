@@ -9,9 +9,6 @@ public class AnimationStateSO : ScriptableObject
     public Sprite[] frames;
     public float framePerSecond = 10;
     public AnimationType animationType = AnimationType.Sequence;
-    public bool flipX = false;
-    public bool flipY = false;
-    public bool flipToDirection = true; // If true, the sprite will flip to the direction of the velocity
 
     public enum AnimationType {
         Sequence,

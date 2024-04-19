@@ -41,13 +41,13 @@ public class SpriteAnimatorHandler: MonoBehaviour
     }
 
     private void Update() {
-        if (animatorHandler.currentAnimation == null) {
+        if (animatorHandler.currentAnimation == null) { // If the current animation is null, set the idle animation
             animatorHandler.currentAnimation = animatorHandler.idleAnimation;
             ChangeAnimation(animatorHandler.idleAnimation);
         }
-        if (displayer == null) SetDisplayer();
+        if (displayer == null) SetDisplayer(); // If their is no displayer, set it
 
-        if (displayer.AnimationDisplaying != animatorHandler.currentAnimation) {
+        if (displayer.AnimationDisplaying != animatorHandler.currentAnimation) { // If the animation is different from the current animation, change it
             ChangeAnimation(animatorHandler.currentAnimation);
             Debug.Log("Animation changed");
         }
